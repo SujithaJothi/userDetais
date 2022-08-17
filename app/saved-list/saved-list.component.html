@@ -1,0 +1,25 @@
+<p>User List</p>
+<table class="table table-bordered">
+    <tr>
+        <th class="thead-light">Sl No</th>
+        <th class="thead-light">Name</th>
+        <th class="thead-light">Gender</th>
+        <th class="thead-light">Email</th>
+        <th class="thead-light">Mobile</th>
+        <th class="thead-light">About Me</th>
+        <th class="thead-light">Action</th>
+    </tr>
+    <tr *ngFor="let user of userList ; let i = index">
+        
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.email}}</td>        
+        <td>{{user.mobile}}</td>   
+        <td>{{user.aboutMe}}</td>
+        <td> 
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+        </td>
+    </tr>
+</table>

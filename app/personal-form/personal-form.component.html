@@ -1,0 +1,28 @@
+<h3>Add / Update</h3>
+<form class="row" [formGroup]="userDetailsForm">
+    <div class="row" >
+        <label >Name*</label>
+        <input type="text" formControlName="userName" >
+    </div>
+    <div class="row">
+        <label >Gender*</label>
+        <input class="col-6" type="radio" id="male" name="gender" value="Male" formControlName="gender">
+        <label class="col-6" for="male">Male</label>
+        <input class="col-6" type="radio" id="female" name="gender" value="Female" formControlName="gender">
+        <label class="col-6" for="female">Female</label>
+    </div>
+    <div class="row">
+        <label >Email*</label>
+        <input type="text" formControlName="userEmail" >
+    </div>
+    <div class="row">
+        <label>Mobile*</label>
+        <input formControlName="userMobile" type="text" >
+    </div>
+    <div class="row">
+        <label >About Me*</label>
+        <textarea formControlName="aboutUser" rows="4" cols="50"></textarea>
+    </div>
+    <div class="col-12"><button (click)="saveUserDetails(userDetailsForm)">Save</button>
+    <button (click)="resetForm()">Reset</button></div>
+</form>

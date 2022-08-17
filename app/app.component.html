@@ -1,0 +1,18 @@
+<!-- <form [formGroup]="productForm">
+  
+    <table class="table table-bordered" formArrayName="quantities">
+      <tr *ngFor="let quantity of quantities().controls; let i=index" [formGroupName]="i">
+        <td>
+           <input type="text" formControlName="inputTxt" class="form-control">
+        </td> 
+        <td><button type="button" (click)="addQuantity()" class="btn btn-primary">Add More</button></td>     
+        <td>
+            <button (click)="removeQuantity(i)" class="btn btn-danger">Remove</button>
+        </td>
+      </tr>
+    </table>    
+  </form> -->
+<div class="row">
+<div class="col-4"><app-personal-form (updateTable)="refreshList()"></app-personal-form></div>
+<div class="col-8"><app-saved-list></app-saved-list></div>
+</div>
